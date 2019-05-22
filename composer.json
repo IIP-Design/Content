@@ -38,6 +38,7 @@
     "humanmade/s3-uploads": "dev-master",
     "iip-design/wp-hide-login-form": "1.0.1",
     "wpackagist-plugin/google-apps-login": "3.2",
+    "wpackagist-plugin/wp-ses":"1.1",
     "iip-design/wp-elasticsearch-feeder": "2.3.0"
   },
   "extra": {
