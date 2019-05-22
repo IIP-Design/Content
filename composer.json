@@ -1,0 +1,47 @@
+{
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "wordpress",
+        "type": "webroot",
+        "version": "5.2.1",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/WordPress/WordPress/archive/5.2.1.zip"
+        },
+        "require": {
+          "fancyguy/webroot-installer": "1.1.0"
+        }
+      }
+    },
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "git",
+      "url": "git@github.com:IIP-Design/wp-hide-login-form.git"
+    },
+    {
+      "type": "git",
+      "url": "git@github.com:IIP-Design/wp-elasticsearch-feeder.git"
+    },
+    {
+      "type": "git",
+      "url": "git@github.com:humanmade/S3-Uploads.git"
+    }
+  ],
+  "require": {
+    "wordpress": "5.2.1",
+    "fancyguy/webroot-installer": "1.1.0",
+    "humanmade/s3-uploads": "dev-master",
+    "iip-design/wp-hide-login-form": "1.0.1",
+    "wpackagist-plugin/google-apps-login": "3.2",
+    "iip-design/wp-elasticsearch-feeder": "2.3.0"
+  },
+  "extra": {
+    "webroot-dir": "wp",
+    "webroot-package": "wordpress"
+  }
+}
