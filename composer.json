@@ -36,6 +36,7 @@
     "wordpress": "5.2.1",
     "fancyguy/webroot-installer": "1.1.0",
     "humanmade/s3-uploads": "dev-master",
+    "wpackagist-theme/twentynineteen":"*",
     "iip-design/wp-hide-login-form": "1.0.1",
     "wpackagist-plugin/google-apps-login": "3.2",
     "wpackagist-plugin/wp-ses":"1.1",
