@@ -49,14 +49,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'Hd4#P#Hyy2<.Ma3 geU/&8RkZ*:e2G^1Y|~|^|y#+T2sX:D1f8Z2/bFD?Qy$sc|u');
-define('SECURE_AUTH_KEY',  'E||-hkt7Z/ t-?n`4m29?TjAJ63xL ~!iz%Uy$p?]b#|hjf;|>2E*qg-*`Dl)E%-');
-define('LOGGED_IN_KEY',    '.HGDZT4+6Gvyo4nCJ:+X&GEMvy?WD7veuuy/-&lN3d}0L]<gV}-n!1v+PW!k~a9$');
-define('NONCE_KEY',        'ie2XNEtc75Fw=vU-u`4C2^Tg8Z9lM[QUC0!-G}.Sq@?=@nVK Va/:v-XY>+K`[fs');
-define('AUTH_SALT',        'o.b<eHX-RrA9Vt#sNTDo#pbA#$cu|Q|uTRt3]!9%56hPv $KR)kg**|B A(y9:CV');
-define('SECURE_AUTH_SALT', 'JU>&Ng[:/22<3v-VZn81Ni/ju|55MsycKH:Yx)UL{xzHo,,[JPkA5MFmO)`6oQ}X');
-define('LOGGED_IN_SALT',   '!EO_kOO{rY!K_ vh93#<&&FBhi99YU9ov=W;=|]D9Q%S~aXR_y6[OaU}#NU+]_JD');
-define('NONCE_SALT',       '>{3r=9YF>r>Q73bR:xgUf{Kc*FPuGNpIKA*xRiQVmp:q6|NgxJKP_deIR],SYa+2');
+define('AUTH_KEY',         getenv('CONTENT_AUTH_KEY'));
+define('SECURE_AUTH_KEY',  getenv('CONTENT_SECURITY_AUTH_KEY'));
+define('LOGGED_IN_KEY',    getenv('CONTENT_LOGGED_IN_KEY'));
+define('NONCE_KEY',        getenv('CONTENT_NONCE_KEY'));
+define('AUTH_SALT',        getenv('CONTENT_AUTH_SALT'));
+define('SECURE_AUTH_SALT', getenv('CONTENT_SECURE_AUTH_SALT'));
+define('LOGGED_IN_SALT',   getenv('CONTENT_LOGGED_IN_SALT'));
+define('NONCE_SALT',       getenv('CONTENT_NONCE_SALT'));
 
 /** AWS S3 Uploads directory **/
 if ( isset( $_SERVER['CONTENT_S3_UPLOADS_BUCKET'] ) ) {
