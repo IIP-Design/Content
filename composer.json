@@ -5,10 +5,10 @@
       "package": {
         "name": "wordpress",
         "type": "webroot",
-        "version": "5.2.1",
+        "version": "5.6",
         "dist": {
           "type": "zip",
-          "url": "https://github.com/WordPress/WordPress/archive/5.2.1.zip"
+          "url": "https://github.com/WordPress/WordPress/archive/5.6.zip"
         },
         "require": {
           "fancyguy/webroot-installer": "1.1.0"
@@ -33,13 +33,13 @@
     }
   ],
   "require": {
-    "wordpress": "5.2.1",
+    "wordpress": "5.6",
     "fancyguy/webroot-installer": "1.1.0",
-    "humanmade/s3-uploads": "dev-master",
+    "humanmade/s3-uploads": "2.2.2",
     "wpackagist-theme/twentynineteen":"*",
-    "iip-design/wp-hide-login-form": "1.0.1",
-    "wpackagist-plugin/google-apps-login": "3.2",
-    "wpackagist-plugin/wp-ses":"1.1",
+    "iip-design/wp-hide-login-form": "v1.1.0",
+    "wpackagist-plugin/google-apps-login": "3.4.3",
+    "wpackagist-plugin/wp-ses":"1.4.4",
     "iip-design/wp-elasticsearch-feeder": "2.5.0"
   },
   "extra": {
