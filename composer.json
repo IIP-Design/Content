@@ -44,6 +44,6 @@
   },
   "extra": {
     "webroot-dir": "wp",
-    "webroot-package": "wordpress"
+    "webroot-package": "wordpress/wordpress"
   }
 }
