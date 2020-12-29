@@ -19,20 +19,20 @@
  */
 
 /** autoload files **/
-require_once(__DIR__ . '/vendor/autoload.php');
+require_once( __DIR__ . '/vendor/autoload.php' );
 
 // ** MySQL settings ** //
 /** The name of the database for WordPress */
-define('DB_NAME', getenv('CONTENT_DB_NAME'));
+define( 'DB_NAME', getenv( 'CONTENT_DB_NAME' ) );
 
 /** MySQL database username */
-define('DB_USER', getenv('CONTENT_DB_USER'));
+define( 'DB_USER', getenv( 'CONTENT_DB_USER' ) );
 
 /** MySQL database password */
-define('DB_PASSWORD', getenv('CONTENT_DB_PASSWORD'));
+define( 'DB_PASSWORD', getenv( 'CONTENT_DB_PASSWORD' ) );
 
 /** MySQL hostname */
-define('DB_HOST', getenv('CONTENT_DB_HOST'));
+define( 'DB_HOST', getenv( 'CONTENT_DB_HOST' ) );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
@@ -49,14 +49,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         getenv('CONTENT_AUTH_KEY'));
-define('SECURE_AUTH_KEY',  getenv('CONTENT_SECURITY_AUTH_KEY'));
-define('LOGGED_IN_KEY',    getenv('CONTENT_LOGGED_IN_KEY'));
-define('NONCE_KEY',        getenv('CONTENT_NONCE_KEY'));
-define('AUTH_SALT',        getenv('CONTENT_AUTH_SALT'));
-define('SECURE_AUTH_SALT', getenv('CONTENT_SECURE_AUTH_SALT'));
-define('LOGGED_IN_SALT',   getenv('CONTENT_LOGGED_IN_SALT'));
-define('NONCE_SALT',       getenv('CONTENT_NONCE_SALT'));
+define( 'AUTH_KEY',         getenv( 'CONTENT_AUTH_KEY' ) );
+define( 'SECURE_AUTH_KEY',  getenv( 'CONTENT_SECURITY_AUTH_KEY' ) );
+define( 'LOGGED_IN_KEY',    getenv( 'CONTENT_LOGGED_IN_KEY' ) );
+define( 'NONCE_KEY',        getenv( 'CONTENT_NONCE_KEY' ) );
+define( 'AUTH_SALT',        getenv( 'CONTENT_AUTH_SALT' ) );
+define( 'SECURE_AUTH_SALT', getenv( 'CONTENT_SECURE_AUTH_SALT' ) );
+define( 'LOGGED_IN_SALT',   getenv( 'CONTENT_LOGGED_IN_SALT' ) );
+define( 'NONCE_SALT',       getenv( 'CONTENT_NONCE_SALT' ) );
 
 /** AWS S3 Uploads directory **/
 if ( isset( $_SERVER['CONTENT_S3_UPLOADS_BUCKET'] ) ) {
@@ -74,6 +74,10 @@ if ( isset( $_SERVER['CONTENT_S3_UPLOADS_SECRET'] ) ) {
 if ( isset( $_SERVER['CONTENT_S3_UPLOADS_REGION'] ) ) {
   define('S3_UPLOADS_REGION', getenv('CONTENT_S3_UPLOADS_REGION'));
 }
+
+/** AWS SES Service Account Keys */
+define( 'WPOSES_AWS_ACCESS_KEY_ID', getenv( 'CONTENT_SES_ACCESS_KEY' ) );
+define( 'WPOSES_AWS_SECRET_ACCESS_KEY', getenv( 'CONTENT_SES_SECRET_KEY' ) );
 
 /**#@-*/
 
@@ -98,14 +102,14 @@ $table_prefix = 'wp_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define( 'WP_DEBUG', false );
-define('WP_DEBUG_LOG', true);
-define('WP_DEBUG_DISPLAY', false);
+define( 'WP_DEBUG_LOG', true );
+define( 'WP_DEBUG_DISPLAY', false );
 
 // Tells Wordpress to look for the wp-content directory in a non-standard location
-define('WP_CONTENT_DIR', __DIR__ . '/wp-content');
+define( 'WP_CONTENT_DIR', __DIR__ . '/wp-content' );
 
-define('FORCE_SSL_ADMIN', true);
-if (strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false)
+define( 'FORCE_SSL_ADMIN', true );
+if ( strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false )
   $_SERVER['HTTPS']='on';
 
 /* That's all, stop editing! Happy publishing. */
