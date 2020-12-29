@@ -3,7 +3,7 @@
     {
       "type": "package",
       "package": {
-        "name": "wordpress",
+        "name": "wordpress/wordpress",
         "type": "webroot",
         "version": "5.6",
         "dist": {
@@ -33,7 +33,7 @@
     }
   ],
   "require": {
-    "wordpress": "5.6",
+    "wordpress/wordpress": "5.6",
     "fancyguy/webroot-installer": "1.1.0",
     "humanmade/s3-uploads": "2.2.2",
     "wpackagist-theme/twentynineteen":"*",
