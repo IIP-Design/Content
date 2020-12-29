@@ -1,4 +1,6 @@
 {
+  "name": "gpalab/content-webroot",
+  "description": "Webroot for the Content WordPress site used to upload articles into Content Commons",
   "repositories": [
     {
       "type": "package",
