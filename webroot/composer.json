@@ -7,10 +7,10 @@
       "package": {
         "name": "wordpress/wordpress",
         "type": "webroot",
-        "version": "5.6",
+        "version": "5.6.2",
         "dist": {
           "type": "zip",
-          "url": "https://github.com/WordPress/WordPress/archive/5.6.zip"
+          "url": "https://github.com/WordPress/WordPress/archive/5.6.2.zip"
         },
         "require": {
           "fancyguy/webroot-installer": "1.1.0"
@@ -35,7 +35,7 @@
     }
   ],
   "require": {
-    "wordpress/wordpress": "5.6",
+    "wordpress/wordpress": "5.6.2",
     "fancyguy/webroot-installer": "1.1.0",
     "humanmade/s3-uploads": "2.2.2",
     "wpackagist-theme/twentynineteen":"*",
