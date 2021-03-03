@@ -7,3 +7,12 @@ wp-content/uploads
 # Composer
 vendor
 composer.lock
+
+# Developmental Build
+.content-dev/build/
+.content-dev/config/caddy-config/
+.content-dev/config/caddy-data/
+
+# Environmental Variables
+.content-dev/config/*.conf
+!.content-dev/config/template.conf

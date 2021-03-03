@@ -1,0 +1,55 @@
+version: '3.7'
+
+services:
+  wordpress:
+    container_name: content_web
+    image: gpalab/wordpress:latest
+    depends_on:
+      - db
+    environment:
+      - 'DB_PORT=3306'
+    expose:
+      - '80'
+    volumes:
+      - ./config/content.conf:/etc/httpd/conf.d/content.conf
+      - ./build:/www/local/sites-enabled/content_dev/
+      - ~/.ssh:/root/.ssh:ro
+
+  db:
+    container_name: content_db
+    image: gpalab/mariadb
+    expose:
+      - '3306'
+    volumes:
+      - mariadb:/var/lib/mysql
+  
+  adminer:
+    container_name: content_adminer
+    image: gpalab/adminer
+    environment:
+      ADMINER_DEFAULT_SERVER: content_db
+    expose:
+      - '8080'
+
+  caddy:
+    container_name: content_caddy
+    image: 'caddy:latest'
+    depends_on:
+      - adminer
+      - wordpress
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ./config/caddy-config:/config
+      - ./config/caddy-data:/data
+      - ./config/Caddyfile:/etc/caddy/Caddyfile
+
+volumes:
+  caddy-data: 
+    name: content_caddy_data
+  caddy-config:
+    name: content_caddy_config
+  mariadb:
+    driver: local
+    name: content_db

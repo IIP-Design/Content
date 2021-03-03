@@ -1,0 +1,7 @@
+content.dev.local {
+  reverse_proxy content_web:80
+}
+
+adminer.local {
+  reverse_proxy content_adminer:8080
+}
