@@ -46,10 +46,6 @@ services:
       - ./config/Caddyfile:/etc/caddy/Caddyfile
 
 volumes:
-  caddy-data: 
-    name: content_caddy_data
-  caddy-config:
-    name: content_caddy_config
   mariadb:
     driver: local
     name: content_db
