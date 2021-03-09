@@ -23,6 +23,10 @@
     },
     {
       "type": "git",
+      "url": "git@github.com:IIP-Design/sitepress-multilingual-cms.git"
+    },
+    {
+      "type": "git",
       "url": "git@github.com:IIP-Design/wp-hide-login-form.git"
     },
     {
@@ -39,6 +43,7 @@
     "fancyguy/webroot-installer": "1.1.0",
     "humanmade/s3-uploads": "2.2.2",
     "wpackagist-theme/twentynineteen":"*",
+    "iip-design/sitepress-multilingual-cms": "4.4.9",
     "iip-design/wp-elasticsearch-feeder": "2.5.0",
     "iip-design/wp-hide-login-form": "v1.1.0",
     "wpackagist-plugin/google-apps-login": "3.4.3",
